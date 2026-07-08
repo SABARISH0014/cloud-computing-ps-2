@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Profile</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: system-ui, -apple-system, sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 20px;
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #00b4db, #0083b0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        h1 { margin: 0; font-size: 1.8rem; }
+        h2 { margin: 5px 0 0 0; font-size: 1.1rem; color: #a1a1aa; font-weight: normal; }
+        
+        /* Contained text area preventing overflow */
+        .bio-box {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .bio-box p { margin: 0; line-height: 1.6; color: #d1d5db; }
+        
+        .btn-back {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: background 0.3s ease;
+            max-width: 100%;
+        }
+        .btn-back:hover { background: rgba(255, 255, 255, 0.2); }
+
+        @media (max-width: 600px) {
+            .profile-header { flex-direction: column; text-align: center; }
+            .container { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <div class="avatar">AK</div>
+            <div>
+                <h1>Aravindh Kannan M.S.</h1>
+                <h2>Lead Developer (Member B)</h2>
+            </div>
+        </div>
+        
+        <div class="bio-box">
+            <p><strong>Role:</strong> Responsible for backend architecture and API integrations.<br><br>
+            <strong>Skills:</strong> MERN Stack, Database Design, Server Management.<br><br>
+            <strong>Focus:</strong> Ensuring robust data flow between the client interfaces and our databases.</p>
+        </div>
+
+        <a href="index.html" class="btn-back">← Back to Hub</a>
+    </div>
+</body>
+</html>

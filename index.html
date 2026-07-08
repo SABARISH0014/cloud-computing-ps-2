@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Hub</title>
+    <style>
+        /* Base styling & Overflow prevention */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: system-ui, -apple-system, sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        /* Glassmorphism Container */
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            /* Keeps text contained */
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+        h1 { margin-top: 0; font-size: 2.2rem; }
+        p { line-height: 1.6; color: #d1d5db; margin-bottom: 30px; }
+        
+        /* Button styling with strict boundaries */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            flex: 1 1 auto;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            max-width: 100%;
+            white-space: normal;
+        }
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 600px) {
+            .container { padding: 30px 20px; }
+            .btn-group { flex-direction: column; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Team Directory</h1>
+        <p>Welcome to our team's central hub. Navigate below to view specific member profiles and project details.</p>
+        
+        <div class="btn-group">
+            <a href="profile.html" class="btn">View Aravindh's Profile</a>
+            <a href="project.html" class="btn">View Meyappan's Project</a>
+        </div>
+    </div>
+</body>
+</html>
