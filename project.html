@@ -42,6 +42,8 @@
         }
         h1 { margin: 0 0 10px 0; font-size: 2rem; }
         h3 { color: #a1a1aa; font-weight: normal; margin-top: 0; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 15px; }
+        .actions { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+        .action-btn { padding: 10px 14px; background: rgba(255,255,255,0.06); color: #fff; text-decoration: none; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); }
         
         /* Contained grid for specs */
         .specs-grid {
@@ -76,6 +78,7 @@
         @media (max-width: 600px) {
             .container { padding: 30px 20px; }
             .specs-grid { grid-template-columns: 1fr; }
+            .actions { flex-direction: column; }
         }
     </style>
 </head>
@@ -83,7 +86,7 @@
     <div class="container">
         <span class="project-tag">Active Development</span>
         <h1>Project Directory App</h1>
-        <h3>Managed by Meyappan R. (Member C)</h3>
+        <h3>Managed by Sabarish P - AI Analyst</h3>
         
         <p style="color: #d1d5db; line-height: 1.6;">This module handles the core directory structure, state management, and user interface mapping for the upcoming hackathon sprint.</p>
 
@@ -101,8 +104,13 @@
                 <p class="spec-value">Offline-first Synchronization</p>
             </div>
         </div>
-
-        <a href="index.html" class="btn-back">← Back to Hub</a>
+        <div class="actions">
+            <a href="index.html" class="action-btn">← Back to Hub</a>
+            <button id="copyLink" class="action-btn">Copy Project Link</button>
+            <a href="mailto:sabarish@example.com?subject=Project%20Directory" class="action-btn">Contact sabarish</a>
+        </div>
+        <p id="copyMsg" style="color:#a1a1aa; margin-top:10px; display:none;">Project link copied to clipboard.</p>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
